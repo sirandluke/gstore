@@ -17,7 +17,7 @@ askPrice = "Enter price (omit '$'): "
 askPublisher = "Enter publisher name press ENTER if not applicable: "
 confirmation = "are these datafields correct? (y/N)"
 nA = "n/a"
-exit = "\n\n\n***ADDITION(S):***\n"
+exit = "\n\n\n***ADDITION(S)***\n"
 changes = ""
 border = "----------------------------------------------------------------------\n"
 

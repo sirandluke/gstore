@@ -1,4 +1,8 @@
-print("***FOR G-STORE MEMBER USE ONLY***")
+##########
+# author: Luke Sirand
+# Intended for use at The General Store Cooperative UCSD
+#########
+
 ###Datafields of a Record###
 # album (string)     -> name of album
 # artist (string)    -> name of artist
@@ -16,10 +20,11 @@ nA = "n/a"
 exit = "\n\n\n***ADDITION(S):***\n"
 changes = ""
 border = "----------------------------------------------------------------------\n"
+
 # allows the program to begin
 userInput = 'a'
 answer = 'N'
-
+print("***FOR G-STORE MEMBER USE ONLY***")
 
 # continues to execute as long as user makes inputs
 while (userInput != 'q'):

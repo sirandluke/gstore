@@ -48,7 +48,7 @@ while (userInput != 'q'):
 			print("Artist: " + artist)
 			print("Price: $" + price)
 			print("Publisher: " + publisher)
-			answer = print(confirmation)
+			answer = input(confirmation)
 
 		#saves changes
 		changes = changes +"[" + "Album: " + album.upper() + " | Artist: " + artist.upper() + " | Price: $" + price + " | Publisher: " + publisher.upper() + "]\n"

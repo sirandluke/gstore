@@ -10,14 +10,17 @@
 # dev (string)       -> name of game developer
 # publisher (string) -> name of publishing company
 
-###String question definitions###
-options = "Enter a command: insert game (a) | exit program (q): "
+###String definitions###
+options = "Enter a command: insert game (a) | delete game (d) | look up game (l) | exit program (q): "
 askTitle = "Enter game name: "
 askConsole = "Enter console name: "
 askPrice = "Enter price (omit '$'): "
 askDeveloper = "Enter developer name: "
 askPublisher = "Enter publisher name (press ENTER if not applicable): "
 confirmation = "are these datafields correct? (y/N)"
+delete = "Entry deleted!"
+found = "Entry found!"
+notFound = "Entry not found!"
 nA = "N/A"
 exit = "\n\n\n***ADDITION(S)***\n"
 changes = ""
@@ -31,6 +34,7 @@ print("***FOR G-STORE MEMBER USE ONLY***")
 # continues to execute as long as user makes inputs
 while (userInput != 'q'):
 	userInput = input(options)
+
 	if userInput == 'a':
 		while(answer == 'N'):
 			#ask user for datafields
@@ -54,10 +58,19 @@ while (userInput != 'q'):
 			print("Developer: " + developer)
 			print("Publisher: " + publisher)
 			answer = input(confirmation)
-
 		#saves changes
 		changes = changes +"[" + "Title: " + title + " | Console: " + console + " | Price: $" + price + " | Developer: " + developer + " | Publisher: " + publisher + "]\n"
 		answer = 'N'
+
+	if userInput == 'd':
+		title = input(askTitle)
+		title = title.upper()
+		#TODO
+
+	if userinput == 'l':
+		title = input(askTitle)
+		title = title.upper()
+		#TODO
 
 print(exit)
 print(border)

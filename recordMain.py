@@ -9,14 +9,18 @@
 # price (int)        -> price of record
 # publisher (string) -> name of publishing company
 
-###String question definitions###
-options = "Enter a command: insert record (a) | exit program (q): "
+###String definitions###
+options = "Enter a command: insert record (a) | delete record (d) | look up
+record (l) | exit program (q): "
 askAlbum = "Enter album name: "
 askArtist = "Enter artist name: "
 askPrice = "Enter price (omit '$'): "
 askPublisher = "Enter publisher name (press ENTER if not applicable): "
 confirmation = "are these datafields correct? (y/N)"
 nA = "N/A"
+delete = "Entry deleted!"
+found = "Entry found!"
+notFound = "Entry not found!"
 exit = "\n\n\n***ADDITION(S)***\n"
 changes = ""
 border = "----------------------------------------------------------------------\n"
@@ -29,6 +33,7 @@ print("***FOR G-STORE MEMBER USE ONLY***")
 # continues to execute as long as user makes inputs
 while (userInput != 'q'):
 	userInput = input(options)
+
 	if userInput == 'a':
 		while(answer == 'N'):
 			#ask user for datafields
@@ -36,7 +41,6 @@ while (userInput != 'q'):
 			artist = input(askArtist)
 			price = input(askPrice)
 			publisher = input(askPublisher)
-
 			#convert strings to lower case
 			album = album.upper()
 			artist = artist.upper()
@@ -49,10 +53,20 @@ while (userInput != 'q'):
 			print("Price: $" + price)
 			print("Publisher: " + publisher)
 			answer = input(confirmation)
-
 		#saves changes
 		changes = changes +"[" + "Album: " + album + " | Artist: " + artist + " | Price: $" + price + " | Publisher: " + publisher + "]\n"
 		answer = 'N'
+
+	if userInput == 'd':
+		album = input (askAlbum)
+		album = album.upper()
+		#TODO
+
+	if userInput == 'l':
+		album = input (askAlbum)
+		album = album.upper()
+		#TODO
+
 
 print(exit)
 print(border)

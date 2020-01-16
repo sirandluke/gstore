@@ -3,7 +3,7 @@
 # Intended for use at The General Store Cooperative UCSD
 #########
 
-import addRecord
+import actionRecord
 
 ###Datafields of a Record###
 # album (string)     -> name of album
@@ -11,8 +11,16 @@ import addRecord
 # price (int)        -> price of record
 # label (string)     -> name of label company
 
+##text file format for bulk insert###
+# b -> specify bulk insert insert
+# album name 
+# artist name
+# price 
+# label name ('na' if not available)
+# q -> when done
+
 ###String definitions###
-options = "Enter a command: insert record (a) | delete record (d) | look up record (l) | exit program (q): "
+options = "Enter a command: insert record (a) | bulk insert (b) | delete record (d) | look up record (l) | exit program (q): "
 askAlbum = "Enter album name: "
 askArtist = "Enter artist name: "
 askPrice = "Enter price (omit '$'): "
@@ -35,7 +43,6 @@ print("***FOR G-STORE MEMBER USE ONLY***")
 if __name__ == "__main__":
 	while (userInput != 'q'):
 		userInput = input(options)
-
 		if userInput == 'a':
 			while(answer == 'N'):
 				#ask user for datafields
@@ -55,24 +62,35 @@ if __name__ == "__main__":
 				print("Price: $" + price)
 				print("Lablel: " + label)
 				answer = input(confirmation)
-			#saves changes
+			#saves changes	
 			changes = changes +"[" + "Album: " + album + " | Artist: " + artist + " | Price: $" + price + " | Label: " + label + "]\n"
 			answer = 'N'
-			addRecord.insert(album,artist,price,label) 
-
-
+			actionRecord.insert(album,artist,price,label)
 		if userInput == 'd':
-			album = input (askAlbum)
+			album = input(askAlbum)
 			album = album.upper()
-			#TODO
+			actionRecord.delete(album)
 		if userInput == 'l':
-			album = input (askAlbum)
+			album = input(askAlbum)
 			album = album.upper()
-			#TODO
+			actionRecord.lookup(album)
+		if userInput == 'b':
+			album = input(askAlbum).upper()
+			artist = input(askArtist).upper()
+			price = input(askPrice).upper()
+			label = input(askLabel).upper()
+			if label == 'na':
+				label = nA
+			else:
+				label = label.upper()
+			changes = changes +"[" + "Album: " + album + " | Artist: " + artist + " | Price: $" + price + " | Label: " + label + "]\n"
+			actionRecord.insert(album,artist,price,label)
+	print(exit)
+	print(border)
+	print(changes)
+	print(border)
 
 
-print(exit)
-print(border)
-print(changes)
-print(border)
+
+	
 

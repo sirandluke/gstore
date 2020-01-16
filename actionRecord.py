@@ -31,7 +31,7 @@ print("actionRecord is now running")
 # cursor = cnx.cursor()
 
 
-myDB = pw.MySQLDatabase("gstoredata",host="gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com",port=3306,user="admin",passwd="Villeneuve")
+myDB = pw.MySQLDatabase("gstoredata",host="gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com",port=3306,user="###",passwd="####")
 
 # create Base Model Record
 class BaseModel(pw.Model):

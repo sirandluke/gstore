@@ -16,7 +16,7 @@ import recordMain
 print("actionRecord is now running")
 
 # try:
-#     cnx = mysql.connector.connect(user='admin', password='Villeneuve', host='gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com', database='gstoredata')
+#     cnx = mysql.connector.connect(user='#', password='#', host='#', database='#')
 
 # except mysql.connector.Error as err:
 #     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:

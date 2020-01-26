@@ -57,6 +57,7 @@ if __name__ == "__main__":
 					label = nA
 				else:
 					label = label.upper()
+				price = float("{0:.2f}".format(price)) # convert price to float
 				print("Album: " + album)
 				print("Artist: " + artist)
 				print("Price: $" + price)
@@ -87,7 +88,8 @@ if __name__ == "__main__":
 			actionRecord.insert(album,artist,price,label)
 	print(exit)
 	print(border)
-	print(changes)
+	if (len(changes) != 0):
+		print(changes)
 	print(border)
 
 

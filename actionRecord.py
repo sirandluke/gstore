@@ -13,7 +13,7 @@ import recordMain
 
 print("actionRecord is now running")
 
-myDB = pw.MySQLDatabase("gstoredata",host="gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com",port=3306,user="admin",passwd="Villeneuve")
+myDB = pw.MySQLDatabase("gstoredata",host="gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com",port=3306,user="***",passwd="***")
 
 # create Base Model Record
 class BaseModel(pw.Model):
@@ -34,7 +34,6 @@ myDB.connect()
  
 # add Record to database
 def insert(album,artist,price,label):
-    print("inserting")
     #check if fields are valid here
     res = Record.insert({
         Record.album: album,
@@ -46,23 +45,20 @@ def insert(album,artist,price,label):
 
 # delete record from database using key: album
 def delete(album):
-    print("deleting")
-    res = Record.get_by_id(album)
-    # check if album is in the database
-    if (res == album):
+    try:
         res = Record.get(Record.album == album)
         res.delete_instance() # returns the number of rows deleted
-    else:
+        print(album + " deleted")
+    except:
         print("Item not found!")
+   
 
 # look for item in database using key: album
 def lookup(album):
-    print("searching")
-    res = Record.get_by_id(album)
-    print(res)
-    if (res == album):
+    try:
+        Record.get_by_id(album)
         print("Item found!")
-    else:
+    except:
         print("Item not found!")
 
 

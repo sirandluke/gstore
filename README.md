@@ -1,7 +1,7 @@
 # gstore
 gstore database 
 
-*INTENDED FOR GENERAL STORE COOPERATIVE UCSD USE*
+*INTENDED FOR UCSD GENERAL STORE COOPERATIVE USE*
 
 ***BY LUKE SIRAND (lsirand@ucsd.edu)
   Univeristy of California, San Diego
@@ -11,10 +11,22 @@ gstore database
 # FILES
 
 recordMain.py
-  INTERPHASE FOR QUERYING
+  Interphase for querying records
+  Accepts user input and textfile as input
 
 actionRecord.py
-  USDED TO ADD, DELETE, AND LOOK UP RECORDS 
+  used to add, delte, and look up records in mySQL table 
 
 gameMain.py
-  USED TO ADD VIDEO GAMES TO DATABASE
+  Interphase for querying video games
+  Accepts user input and textfile as input
+  
+  
+# INNACTIVE FILES
+  addRecord.py
+    now encompassed in actionRecord.py
+    
+  addGame.py
+    now encompassed by actionGame.py
+    
+   

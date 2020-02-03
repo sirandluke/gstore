@@ -65,9 +65,7 @@ def lookup(album):
 
 #Record.insert(album = recordMain.album, artist = recordMain.artist, price = recordMain.price, label = recordMain.label)
 
-
-# #rows = cursor.execute("select * from gstoredata.records")
-# #for i in range(rows):
-# #result = cursor.fetchall()
-# #print(result)
-
+#rows = cursor.execute("select * from gstoredata.records")
+#for i in range(rows):
+#result = cursor.fetchall()
+#print(result)

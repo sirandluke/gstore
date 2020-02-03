@@ -32,6 +32,7 @@ found = "Entry found!"
 notFound = "Entry not found!"
 exit = "\n\n\n***ADDITION(S)***\n"
 changes = ""
+showChanges = 0
 border = "----------------------------------------------------------------------\n"
 
 # allows the program to begin
@@ -57,7 +58,6 @@ if __name__ == "__main__":
 					label = nA
 				else:
 					label = label.upper()
-				price = float("{0:.2f}".format(price)) # convert price to float
 				print("Album: " + album)
 				print("Artist: " + artist)
 				print("Price: $" + price)
@@ -65,12 +65,14 @@ if __name__ == "__main__":
 				answer = input(confirmation)
 			#saves changes	
 			changes = changes +"[" + "Album: " + album + " | Artist: " + artist + " | Price: $" + price + " | Label: " + label + "]\n"
+			showChanges = showChanges + 1
 			answer = 'N'
 			actionRecord.insert(album,artist,price,label)
 		if userInput == 'd':
 			album = input(askAlbum)
 			album = album.upper()
 			actionRecord.delete(album)
+			showChanges = showChanges - 1
 		if userInput == 'l':
 			album = input(askAlbum)
 			album = album.upper()
@@ -86,13 +88,8 @@ if __name__ == "__main__":
 				label = label.upper()
 			changes = changes +"[" + "Album: " + album + " | Artist: " + artist + " | Price: $" + price + " | Label: " + label + "]\n"
 			actionRecord.insert(album,artist,price,label)
-	print(exit)
-	print(border)
-	if (len(changes) != 0):
+	if (len(changes) != 0 & showChanges > 0):
+		print(exit)
+		print(border)
 		print(changes)
 	print(border)
-
-
-
-	
-

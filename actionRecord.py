@@ -13,13 +13,15 @@ import recordMain
 
 print("actionRecord is now running")
 
-myDB = pw.MySQLDatabase("gstoredata",host="gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com",port=3306,user="***",passwd="***")
+myDB = pw.MySQLDatabase("gstoredata",host="gstore.cehnumckhx7r.us-east-2.rds.amazonaws.com",port=3306,user="admin",passwd="Villeneuve")
 
 # create Base Model Record
 class BaseModel(pw.Model):
     class Meta:
         database = myDB
 
+
+# add another field for genre/ somekey to use in order to know where items are in store
 
 # create Record object
 class Record(BaseModel):
@@ -65,7 +67,9 @@ def lookup(album):
 
 #Record.insert(album = recordMain.album, artist = recordMain.artist, price = recordMain.price, label = recordMain.label)
 
-#rows = cursor.execute("select * from gstoredata.records")
-#for i in range(rows):
-#result = cursor.fetchall()
-#print(result)
+
+# #rows = cursor.execute("select * from gstoredata.records")
+# #for i in range(rows):
+# #result = cursor.fetchall()
+# #print(result)
+

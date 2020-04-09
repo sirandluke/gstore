@@ -1,6 +1,5 @@
-# gstore
-gstore database 
-
+# gstore database
+  Using python and mySQL
 
 ***BY LUKE SIRAND (lsirand@ucsd.edu)
   Univeristy of California, San Diego

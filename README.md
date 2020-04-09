@@ -15,11 +15,14 @@ recordMain.py
   Accepts user input and textfile as input
 
 actionRecord.py
-  used to add, delte, and look up records in mySQL table 
+  used to query games in mySQL table 
 
 gameMain.py
   Interphase for querying video games
   Accepts user input and textfile as input
+
+actionGame.py
+  used to query games mySQLtable
   
   
 # INNACTIVE FILES

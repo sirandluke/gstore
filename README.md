@@ -7,6 +7,9 @@ gstore database
   Univeristy of California, San Diego
   B.S. Mathematics and Computer Science
 
+#TABLES
+  You can view all the videogames carried at the general store here:
+  https://docs.google.com/spreadsheets/d/1l1cxksATUeqD1xwl3licfzde0CKJD9n-KBQspOdyWIw/edit?usp=sharing
 
 # FILES
 

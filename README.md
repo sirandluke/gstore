@@ -6,9 +6,12 @@
   B.S. Mathematics and Computer Science
 
 # TABLES
-
-  You can view all the videogames carried at the general store here:
+  
+  I querried to query 300+ video games into a mySQL table which I then transfered over to a google spreadsheet. 
+  You can view all the videogames for sale at the general store here:
   https://docs.google.com/spreadsheets/d/1l1cxksATUeqD1xwl3licfzde0CKJD9n-KBQspOdyWIw/edit?usp=sharing
+  
+  
 
 # FILES
 

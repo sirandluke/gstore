@@ -7,7 +7,7 @@
 
 # TABLES
   
-  I querried 300+ video games into a mySQL table which I then transfered over to a google spreadsheet. 
+  I querried +300 video games into a mySQL table which I then transfered over to a google spreadsheet. 
   You can view all the videogames for sale at the general store here:
   
   https://docs.google.com/spreadsheets/d/1l1cxksATUeqD1xwl3licfzde0CKJD9n-KBQspOdyWIw/edit?usp=sharing

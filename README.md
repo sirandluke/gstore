@@ -1,9 +1,8 @@
 # gstore database
   Using python and mySQL
 
-***BY LUKE SIRAND (lsirand@ucsd.edu)
-  Univeristy of California, San Diego
-  B.S. Mathematics and Computer Science
+By Luke Sirand (lsirand@ucsd.edu)
+Univeristy of California, San Diego
 
 # TABLES
   
